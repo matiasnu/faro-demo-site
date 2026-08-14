@@ -1,0 +1,148 @@
+/* faro-demo-site — hoja externa (movida desde <style> inline).
+   Mover el CSS acá es lo que permite que el motor de contraste de FARO
+   (list_css_files) encuentre y reescriba la regla — ver README y
+   context/cobertura-gaps.md (HU-29) en faro-ecosystem para el detalle. */
+
+:root {
+  --brand: #1b3a5b;
+  --brand-light: #2e6da4;
+  --ink: #222;
+  --paper: #fdfdfc;
+  --card: #ffffff;
+  --border: #e4e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.5;
+}
+
+header {
+  background: linear-gradient(135deg, var(--brand), #234b73);
+  color: #fff;
+  padding: 1.25rem 2rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* WCAG 1.4.3 (color-contrast): gris claro sobre blanco, ~2.3:1 — sin tocar */
+.muted {
+  color: #b9b9b9;
+}
+
+.icon-btn {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 0.35rem;
+  border-radius: 6px;
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem 0 2.5rem;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+  margin: 0 0 0.5rem;
+  color: var(--brand);
+}
+
+.cta {
+  background: var(--brand-light);
+  color: #fff;
+  border: 0;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background: #255a8c;
+}
+
+section {
+  margin-top: 2.5rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+form {
+  display: grid;
+  gap: 0.9rem;
+  max-width: 420px;
+}
+
+input {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid var(--border);
+  padding: 0.6rem 1rem;
+  text-align: left;
+}
+
+.table-plans tr:first-child td {
+  background: #f4f6f8;
+  font-weight: 600;
+}
+
+footer {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+}
