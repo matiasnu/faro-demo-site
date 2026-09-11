@@ -101,9 +101,9 @@
 
     <div class="card" id="registro">
       <!-- WCAG 1.3.1 (HU-37): etiqueta visible sin asociar, PR con id y for -->
-      <div><label>DNI</label><input type="text" name="dni"></div>
+      <div><label for="faro-dni">DNI</label><input id="faro-dni" type="text" name="dni"></div>
       <!-- WCAG 1.3.1 (HU-37): texto visible en un span, PR con aria-labelledby -->
-      <div><span>Código postal</span><input type="text" name="cp"></div>
+      <div><span id="faro-label-cp">Código postal</span><input aria-labelledby="faro-label-cp" type="text" name="cp"></div>
       <!-- WCAG 3.3.2 (HU-37): campo sin ninguna etiqueta, Issue con cómo arreglarlo -->
       <div><input type="text" name="cupon"></div>
       <!-- WCAG 3.3.3 (HU-38): mensaje de error que no sugiere la corrección, Issue -->
