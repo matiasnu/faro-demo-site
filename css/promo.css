@@ -1,0 +1,7 @@
+/* faro-demo-site — segunda hoja externa, a propósito.
+   WCAG 1.4.3 (color-contrast): gris claro sobre blanco. Junto con .muted de
+   styles.css, obliga a FARO a abrir un PR de contraste que toque 2 archivos. */
+
+.promo-note {
+  color: #c4c4c4;
+}

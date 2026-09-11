@@ -14,6 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- WCAG 2.4.2 (document-title): no hay <title> -->
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/promo.css">
 </head>
 <body>
   <!--
@@ -86,6 +87,37 @@
         </tr>
       </table>
     </section>
+
+    <!-- Prueba integral 2026-09: errores agregados al final para no mover los selectores de arriba -->
+
+    <section class="card" id="promo">
+      <!-- WCAG 1.4.3 en una segunda hoja (promo.css): junto con la de styles.css, el PR de contraste toca 2 archivos -->
+      <p class="promo-note">Envío gratis en compras mayores a $50.000.</p>
+      <!-- WCAG 1.1.1 agrupado: tres imágenes sin texto alternativo, un solo PR con varios nodos -->
+      <img src="assets/banner-envios.png" title="Envíos a todo el país" width="200" height="80">
+      <img src="assets/banner-cuotas.png" title="Hasta 12 cuotas sin interés" width="200" height="80">
+      <img src="assets/banner-soporte.png" title="Soporte las 24 horas" width="200" height="80">
+    </section>
+
+    <div class="card" id="registro">
+      <!-- WCAG 1.3.1 (HU-37): etiqueta visible sin asociar, PR con id y for -->
+      <div><label>DNI</label><input type="text" name="dni"></div>
+      <!-- WCAG 1.3.1 (HU-37): texto visible en un span, PR con aria-labelledby -->
+      <div><span>Código postal</span><input type="text" name="cp"></div>
+      <!-- WCAG 3.3.2 (HU-37): campo sin ninguna etiqueta, Issue con cómo arreglarlo -->
+      <div><input type="text" name="cupon"></div>
+      <!-- WCAG 3.3.3 (HU-38): mensaje de error que no sugiere la corrección, Issue -->
+      <div><label for="edad">Edad</label><input id="edad" name="edad" type="number" min="18" aria-invalid="true" aria-describedby="edad-msg"><span id="edad-msg">Dato inválido</span></div>
+    </div>
+
+    <div id="avisos">
+      <!-- WCAG 4.1.3 (HU-39): tres contenedores de estado sin live region, un solo PR -->
+      <div class="toast"></div>
+      <p id="form-error" hidden></p>
+      <span class="cart-count">3</span>
+      <!-- Control negativo: ya es live region, no se tiene que reportar -->
+      <div id="aviso-ok" role="status"></div>
+    </div>
   </main>
 
   <footer>

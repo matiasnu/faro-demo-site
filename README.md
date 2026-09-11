@@ -22,6 +22,17 @@ Contiene errores de accesibilidad **intencionales** para validar el motor de aud
 | 1.4.3 | `color-contrast` | Texto gris claro sobre blanco (~2.3:1) |
 | 1.4.1 | (heurística) | Enlace distinguible solo por color |
 
+## Errores agregados para la prueba integral (septiembre 2026)
+
+| Criterio WCAG | Regla | Dónde | Qué valida |
+| :-- | :-- | :-- | :-- |
+| 1.4.3 | `color-contrast` | `.promo-note` en `css/promo.css` | PR que toca 2 archivos CSS |
+| 1.1.1 | `image-alt` | 3 banners con `title` y sin `alt` | Un PR por violación con varios nodos |
+| 1.3.1 | `faro-unassociated-label` | Campos DNI y Código postal | HU-37, PR |
+| 3.3.2 | `faro-missing-label` | Campo cupón | HU-37, Issue |
+| 3.3.3 | `faro-error-suggestion` | Campo edad | HU-38, Issue |
+| 4.1.3 | `faro-status-message-not-announced` | `#avisos` | HU-39, un PR con 3 nodos |
+
 ## Uso
 
 - Instalá la GitHub App `faro-utn` sobre este repo para probar la apertura de Issues (HU-16).
