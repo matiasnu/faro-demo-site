@@ -50,7 +50,7 @@ header {
 
 /* WCAG 1.4.3 (color-contrast): gris claro sobre blanco, ~2.3:1 — sin tocar */
 .muted {
-  color: #b9b9b9;
+  color: #747474;
 }
 
 .icon-btn {
